@@ -14,8 +14,8 @@ start = time.time()
 try:
 
     s3_client = boto3.client(service_name="s3",
-                            aws_access_key_id="AKIA46VH6MQWC3WJDV3T",
-                            aws_secret_access_key="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")
+                            aws_access_key_id=os.environ['HDRIVE_S3_ACCESS_KEY'],
+                            aws_secret_access_key=os.environ['HDRIVE_S3_SECRET_KEY'])
 
     post_db = os.environ['db_name']
     post_user = os.environ['db_user']
